@@ -1,4 +1,4 @@
-# DSA Node Web Stack
+# Invenstory Management
 
 This Web Stack is intended for a general purpose of small to middle scale Website for short dev cycle.
 
@@ -7,12 +7,8 @@ This Web Stack is intended for a general purpose of small to middle scale Websit
 
 ## Authors
   - Hongbo Zhang
-  - Joseph Pahl
-  - Yingge Li
 
 ## Current application location
-  - run.recsports.vt.edu:3001
-  - pay.recsports.vt.edu
 
 ## Technology
 

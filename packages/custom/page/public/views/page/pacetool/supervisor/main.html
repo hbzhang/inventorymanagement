@@ -1,0 +1,77 @@
+
+<div class=" bootcards-container" id="main" data-ng-controller="EmployeeFormBasicInformationDetailsController">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+        <div class="bootcards-cards">
+
+            <div class="bootcards-list" id="list" data-title="Notes">
+
+
+                <div class="panel panel-default">
+
+                    <div class="panel-body">
+
+                        <div>
+                            <a href="{{preurl}}">Go Back to Employee Submitted Forms</a>
+                        </div>
+
+                        <hr/>
+
+                        <h4 class="text-center">Supervisor Evaluate and Approve {{employeename}}</h4>
+
+
+                        <div id="wrapper">
+
+                            <h4 class="text-center">{{formname}}</h4>
+
+
+                            </br>
+
+
+                            <tabset>
+                                <tab heading="Instructions">
+                                    <div ng-include="'page/views/page/pacetool/supervisor/form/formbasicinformation.html'"></div>
+                                </tab>
+                                <!--<tab heading="Employee Form" active="true" data-ng-controller="EmployeeContentDisplayController">
+                                    <div ng-include="'page/views/page/pacetool/supervisor/form/employeenew.html'"></div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-8 col-md-offset-4">
+                                            <input type="submit" ng-click="saveregisteries()" class="btn btn-default"/>
+                                        </div>
+                                    </div>
+                                </tab> -->
+                                <tab heading="Employee Submission" select="getregisters()" data-ng-controller="SupervisorDisplayEmployeeSubmissionController">
+                                    <div ng-include="'page/views/page/pacetool/supervisor/form/supervisoremployeesubmission.html'"></div>
+                                </tab>
+
+                                <!--
+                                <tab heading="Supervisor Review" select="removeallsupervisorobjects()" data-ng-controller="SupervisorFormController">
+                                    <div ng-include="'page/views/page/pacetool/supervisor/form/supervisornew.html'"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-8 col-md-offset-4">
+                                            <input type="submit" ng-click="saveregisteries()" class="btn btn-default"/>
+                                        </div>
+                                    </div>
+                                </tab>
+                                <tab heading="Supervisor Submission" active="true" select="getregisters()" data-ng-controller="SupervisorSubmissionController">
+                                    <div ng-include="'page/views/page/pacetool/supervisor/form/supervisorsubmission.html'"></div>
+                                </tab>
+                                -->
+                            </tabset>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>

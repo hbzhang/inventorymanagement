@@ -1,0 +1,41 @@
+<div ng-controller="ReviewersEmployeesController">
+    <div class="loader" data-ng-init="init()" data-ng-hide="users.length"></div>
+    <h4><b>List of Employees for Review</b></h4>
+
+    <div class="alert alert-info" role="alert">
+        As a reviewer, please use this section to review and approve your employee submissions.
+    </div>
+
+    <div class="panel panel-default bootcards-summary">
+        <div class="panel-body">
+            <div class="row">
+
+                <div class="col-xs-6 col-sm-4" data-ng-show="users.length" data-ng-repeat="user in users">
+
+                    <div>
+                        <ul class="unstyled">
+
+                            <li class="table-editable-cell" data-ng-repeat="field in userSchema" data-ng-if="field.inTable">
+
+                                <a class="bootcards-summary-item" data-ng-if="(field['type'] == 'text')" href="/#!/revieweremployeeforms/Employee/{{user[field['schemaKey']]}}">
+                                    <i class="fa fa-3x fa-user-o"></i>
+                                    <h4 > <b> {{user[field['schemaKey']]}} </b> </h4>
+                                </a>
+
+                                <!--<a class="btn text-center" data-ng-if="(field['type'] == 'email')" href="/#!/supervisedemployeeforms/Employee/{{user[field['schemaKey']]}}">
+                                    <h4 > <b> {{user[field['schemaKey']]}} </b> </h4>
+
+                                </a> -->
+
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

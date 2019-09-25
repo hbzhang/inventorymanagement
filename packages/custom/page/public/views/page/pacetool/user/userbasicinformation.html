@@ -1,0 +1,26 @@
+<table st-table="rowCollection" class="table table-striped">
+    <thead>
+    <tr>
+        <th>Faculty Member Name</th>
+        <th>Faculty Member Email</th>
+        <th>Faculty Member Dept/Org</th>
+        <th>Faculty Member Work Location</th>
+        <th>Supervisor Name</th>
+        <th>Supervisor Title</th>
+        <th>Review Year Cycle</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{userinformation.attributes[0].Name}} </td>
+        <td>{{userinformation.attributes[0].Email}}</td>
+        <td>{{userinformation.attributes[0].Department}}</td>
+        <td>{{userinformation.attributes[0].Location}}</td>
+        <td>{{supervisorname}}</td>
+        <td>{{supervisortitle}}</td>
+        <td>{{thisyear}}</td>
+
+    </tr>
+    </tbody>
+</table>

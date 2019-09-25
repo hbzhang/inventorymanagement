@@ -1,0 +1,50 @@
+<div ng-controller="AppCtrl">
+
+    <div class="panel panel-default bootcards-chart">
+
+        <div class="panel-heading">
+            <h3 class="panel-title">Upcoming at Recsports</h3>
+        </div>
+
+        <div>
+
+            <!--bar chart-->
+            <!--<div class="bootcards-chart-canvas" id="chartClosedSales"></div> -->
+
+            <div ng-controller="ListCtrl">
+                <h1 ng-cloak><a href="{{feed_result.link}}" target="_blank" ng-bind-html="feed_result.title"></a></h1>
+
+                <p ng-cloak>{{feed_result.description}}</p>
+
+                <div class="well well-small" ng-repeat="entry in feed_result.entries" list-done="layoutDone()" ng-cloak>
+                    <a href="" ng-click="viewDetail(entry)" class="pull-left rssThumb" title="view detail" data-toggle="tooltip"><img ng-repeat="thumbnail in mediaOne(entry).thumbnails" ng-src="{{thumbnail.url}}"></a>
+
+                    <a href="{{entry.link}}" target="_blank" title="view at {{feed_result.viewAt}}" data-toggle="tooltip" data-placement="left" class="btn btn-primary pull-right" style="margin: 0 0 5px 10px">View at...</a>
+
+                    <!--<h4><a href="" ng-click="viewDetail(entry)" title="view detail" data-toggle="tooltip">{{entry.title}}</a></h4> -->
+
+                    <h4>{{entry.title}}</h4>
+
+                    <p ng-bind-html="entry.contentSnippet"></p>
+
+                    <p class="muted">
+                        Posted: {{entry.publishedDate}} -
+                        <span class="label label-info" ng-repeat="category in entry.categories">{{category}}</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="panel-footer">
+            <small class="pull-left">Date: {{currentdate}}</small>
+            <a class="btn btn-link btn-xs pull-right"
+               href="/snippets/chart"
+               data-toggle="modal"
+               data-target="#docsModal">
+                </a>
+        </div>
+
+    </div>
+
+</div>

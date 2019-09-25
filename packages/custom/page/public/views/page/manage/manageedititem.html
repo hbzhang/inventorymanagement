@@ -1,0 +1,25 @@
+<div select = "clearitems()" ng-controller="EditCreatedItemController">
+
+
+    <section id="main_content" class="inner main-inner" ng-controller="WizardCtrl">
+        <wizard on-finish="finished()">
+            <wz-step title="Equipment Basic Information">
+                <div  ng-include="'/product/views/product/create/itemfromform.html?item={{random}}'"></div>
+                <input type="submit" wz-next value="Next"/>
+            </wz-step>
+            <wz-step title="Equipment Form">
+                <h2>Build the Form for the Equipment</h2>
+                <div ng-include="'/product/views/product/create/itemformbuilder.html'"></div>
+                <div class="form-group">
+                    <div class="col-md-8 col-md-offset-4">
+                        <input type="submit" ng-click="submit()" class="btn btn-default"/>
+                    </div>
+                </div>
+                <input type="button" ng-click="goBack()" value="Go Back" />
+            </wz-step>
+        </wizard>
+    </section>
+
+    <toaster-container toaster-options="{'time-out': 300, 'close-button':true}"></toaster-container>
+
+</div>

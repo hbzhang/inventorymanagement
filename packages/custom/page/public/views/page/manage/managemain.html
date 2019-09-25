@@ -1,0 +1,52 @@
+<div id="columns"  data-ng-controller="ListCreatedItemController">
+
+        <div  class="pin" data-ng-controller="ListItemController">
+
+            <div ng-repeat="item in allForms">
+
+                <a href="#!/manage/create/{{item.id}}"  style=" text-align:center;">
+                    <!--<i class="fa fa-4x fa-plus" /> -->
+                    <img class="thumbnail"  src="/public/add-icon.png" />
+
+                </a>
+
+                <a href="#!/manage/create/{{item.id}}">
+                    <h4 class="text-center">
+                        Add a New Equipment
+                    </h4>
+                </a>
+
+
+            </div>
+        </div>
+
+
+    <div  data-ng-controller="ManagePublicFormController">
+
+    <div  class="pin" ng-repeat="item in allPublicformItems">
+
+            <div>
+
+                <a href="#!/manage/content/{{item.name}}-{{userid}}-{{item.value._id}}">
+                    <img class="thumbnail"  src="{{item.coverphoto}}" />
+                </a>
+
+                <a href="#!/manage/content/{{item.name}}-{{userid}}-{{item.value._id}}">
+                    <h4 class="text-center">
+                        {{item.name}}
+                    </h4>
+                </a>
+
+                <a class="btn" href="/#!/manage/edit/{{item.id}}">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+                <a class="btn" data-ng-click="removeItem(item)" target="_blank">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </a>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>

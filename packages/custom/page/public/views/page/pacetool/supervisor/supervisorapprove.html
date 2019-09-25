@@ -1,0 +1,52 @@
+
+<div class=" bootcards-container" id="main" data-ng-controller="SupervisorApprovedController">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+        <div class="bootcards-cards">
+
+            <div class="bootcards-list" id="list" data-title="Notes">
+
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <div>
+                            <a href="{{preurl}}">Go Back</a>
+                        </div>
+
+
+                        <div class="alert alert-info" role="alert">
+                           <p>
+                               You can approve employee's submission. After approval, you are able to continue to evaluate before reviewer has approved. Once reviewer has approved, you are not able to
+                               continue to evaluate the employee's submission.
+                            </p>
+                            <p>
+                               The evaluation phase for an empoyee can only be done given both supervisor and reviewer have approved the employee submission.
+                           </p>
+                        </div>
+
+
+                        <hr/>
+
+                        <div id="wrapper" data-ng-controller="UserApproveController">
+                            <input type="submit" ng-show="supervisoragreed != 'yes'" ng-click="supervisorapprove()" class="btn btn-default" value="Approve"/>
+
+                            <input type="submit"  ng-show="supervisoragreed === 'yes' && revieweragreed === 'no'" ng-click="supervisordisapprove()" class="btn btn-default" value="Continue to Evaluate"/>
+
+                            <div data-ng-controller="PdfExportController" ng-include="' page/views/page/pacetool/employee/employeecombinedtableformat.html'"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>

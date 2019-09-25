@@ -1,0 +1,43 @@
+
+<div class=" bootcards-container" id="main">
+
+    <h1>Jerry Colyer Memorial Classic</h1>
+
+    <div class="row">
+
+        <div class="bootcards-cards">
+
+            <div class="bootcards-list" id="list" data-title="Notes">
+
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <div id="wrapper" data-ng-controller="PayController">
+
+                            <tabset>
+                                <!--<tab heading="Information">
+                                    <div ng-include="'front/views/pages/bootcards/pay/forminformation.html'"></div>
+                                </tab> -->
+                                <tab heading="Payment Form" active="true">
+                                    <div ng-include="'front/views/pages/bootcards/pay/form.html'"></div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-8 col-md-offset-4">
+                                            <input type="submit" ng-click="payit()" class="btn btn-default"/>
+                                        </div>
+                                    </div>
+                                </tab>
+                            </tabset>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

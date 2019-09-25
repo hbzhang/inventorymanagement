@@ -1,0 +1,54 @@
+
+<div data-ng-controller="UserAdminHierarchyController">
+    <div ng-if="displaytheitem">
+
+
+        <div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.title.$invalid }">
+
+            <div class="panel">
+                <strong> User Information:</strong>
+            </div>
+
+
+            <div class="panel">
+                <div class='permission'>
+                    <p>User Name:{{userinformation[0].name}}</p>
+
+                    <p>Email:{{userinformation[0].email}}</p>
+
+                    <p>Roles:</p>
+                    <tags-input ng-model="userroles">
+                        <auto-complete source="loadTags($query)"></auto-complete>
+                    </tags-input>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <!--<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.title.$invalid }">
+
+        <section class="col-md-8 col-sm-8" class="container">
+        <h4 class="text-primary">Choose a Role</h4>
+          <privilege-tree tree-data="my_data" tree-control="my_tree" on-select="my_tree_handler(branch)" expand-level="2" initial-selection="Granny Smith"></privilege-tree>
+        </section>
+
+        <section class="col-md-4 col-sm-4">
+            <section class="panel">
+                <button ng-click="try_adding_a_root_branch()" class="btn btn-info">Add ROLE to Person</button>
+            </section>
+        </section>
+        </div> -->
+
+
+        <div>
+                <!--<button ng-click="launchInlineModal()" class="btn btn-info">modal</button>  data-ng-controller="modalController" -->
+
+            </div>
+    </div>
+</div>
+
+
+
+

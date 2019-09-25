@@ -1,0 +1,71 @@
+<div class=" bootcards-container" id="main">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+        <div class="bootcards-cards">
+
+            <div class="bootcards-list" id="list" data-title="Notes">
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <div id="wrapper">
+
+                            <p class="alert alert-danger" role="alert" ng-if="allRegisteredItems.length === 0">
+                                Employee has not provided a submission for the form yet. Please ask the employee to do so.
+                            </p>
+
+                            <div id="columns">
+
+                                <div class="pin" ng-repeat="item in allRegisteredItems track by $index">
+
+                                    <div>
+
+                                        <h3 ng-if="allRegisteredItems.length===1">
+
+                                            <a href="#!/supervisoremployee/submission/{{wholeprogramforform}}-{{item.value._id}}">
+                                                {{employeesubmissionname}} Submission
+                                            </a>
+
+                                        </h3>
+                                        <h3 ng-if="allRegisteredItems.length>1">
+
+                                            <a href="#!/supervisoremployee/submission/{{wholeprogramforform}}-{{item.value._id}}">
+                                                Submission-{{$index+1}}
+                                            </a>
+
+                                        </h3>
+                                        <h4>
+                                            {{item.value.registercreatedtime}}
+                                        </h4>
+
+                                      <!--  <div class="classedit" >
+                                            <div class="editbtns">
+
+                                                <a class="btn" data-ng-click="removeRegister(item)">
+                                                    <i class="glyphicon glyphicon-trash"></i>
+                                                </a>
+
+                                            </div>
+                                        </div> -->
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        </div>
+    </div>
+</div>

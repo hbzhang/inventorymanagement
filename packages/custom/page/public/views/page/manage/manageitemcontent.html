@@ -1,0 +1,49 @@
+
+<div class=" bootcards-container" id="main"  data-ng-controller="ManageFormBasicInformationController">
+
+    <div class="row">
+
+        <div class="bootcards-cards">
+
+            <div class="bootcards-list" id="list" data-title="Notes">
+
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <div class="row">
+                            <a href="{{manageformsurl}}">Go Back</a>
+                        </div>
+
+                        <hr/>
+
+                        <div id="wrapper">
+
+                            <h4 class="text-center">{{formname}}</h4>
+
+                            <tabset>
+                                <tab heading="Form" active="true" data-ng-controller="ManageformContentController">
+                                    <div ng-include="'page/views/page/manage/manageformtofillout.html'"></div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-8 col-md-offset-4">
+                                            <input type="submit" ng-click="saveregisteries()" class="btn btn-default"/>
+                                        </div>
+                                    </div>
+                                </tab>
+                                <tab heading="Submission" select="getregisters()" data-ng-controller="ManageSubmissionController">
+                                    <div ng-include="'page/views/page/manage/manageformsubmission.html'"></div>
+                                </tab>
+                            </tabset>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

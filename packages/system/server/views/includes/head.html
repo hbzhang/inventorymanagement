@@ -1,0 +1,58 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+  <title>Virginia Tech Pace Tool</title>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="Virginia Tech Pace Tool">
+
+  <meta property="fb:app_id" content="1.0">
+  <meta property="og:title" content="Virginia Tech Pace Tool">
+  <meta property="og:description" content="This is a tool for Virginia Tech DSA Faculty Evaluation">
+  <meta property="og:type" content="Education">
+  <meta property="og:url" content="Pace.dsa.vt.edu">
+  <meta property="og:image" content="/public/favoicon.ico">
+  <meta property="og:site_name" content="DSA Pace Tool Portal">
+
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/modules/aggregated.css">
+
+  {% for file in assets.core.css %}
+  <link rel="stylesheet" href="/{{file}}">
+  {% endfor %}
+
+  <link rel="icon" type="image/png" href="/public/favicon.ico" />
+
+  <script type="text/javascript" src="/modules/aggregated.js?group=header"></script>
+
+  <script src="https://www.google.com/jsapi"></script>
+
+  <script type="text/javascript">
+    //highlight first list group option (if non active yet)
+    if ( $('.list-group a.active').length === 0 ) {
+      $('.list-group a').first().addClass('active');
+    }
+
+    bootcards.init( {
+      offCanvasHideOnMainClick : true,
+      offCanvasBackdrop : true,
+      enableTabletPortraitMode : true,
+      disableRubberBanding : true,
+      disableBreakoutSelector : 'a.no-break-out'
+    });
+
+  </script>
+
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>

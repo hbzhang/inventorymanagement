@@ -1,0 +1,62 @@
+<div class=" bootcards-container" id="main" data-ng-controller="ReviewerFormBasicInformationController">
+
+    <div class="row" data-ng-controller="ReviewerEmployeeFormController">
+
+        <div class="col-lg-12">
+        <div class="bootcards-cards">
+
+            <div class="bootcards-list" id="list" data-title="Notes">
+
+                <div class="panel panel-default" data-ng-controller="IsApprovedController">
+                    <div class="panel-body">
+
+                        <div>
+                            <a href="{{preurlemployeelist}}">Go Back to Reviewer Employee List</a>
+                        </div>
+
+                        <h4 class="text-center">Reviewer Review and Approve {{submissionusername}}</h4>
+
+                        <div class="alert alert-info" role="alert" ng-show="revieweragreed === 'yes'">
+                            {{submissionusername}}'s submission already approved
+                        </div>
+                                
+                         <div ng-show="revieweragreed === 'no'" >
+
+                                    <div class="list-group" >
+
+                                        <a class="list-group-item" href="#!/reviewer/content/{{submissionusername}}-{{allItems[0].value._id}}">
+
+                                            <i class="fa fa-2x fa-check-circle-o pull-left" aria-hidden="true"></i>
+
+                                            <h4 class="list-group-item-heading">Evaluate Employee Submission </h4>
+                                            <p class="list-group-item-text"></p>
+
+                                        </a>
+
+                                    </div>
+
+                         </div>
+
+
+                         <div class="list-group" >
+
+                                    <a class="list-group-item" href="#!/reviewer/approve/{{userid}}">
+
+                                        <i class="fa fa-2x fa-check-circle-o pull-left" aria-hidden="true"></i>
+
+                                        <h4 class="list-group-item-heading">Approve Employee Submission </h4>
+                                        <p class="list-group-item-text"></p>
+
+                                    </a>
+
+                          </div>
+
+                    </div>
+                </div>
+
+            </div>
+            </div>
+
+        </div>
+    </div>
+</div>

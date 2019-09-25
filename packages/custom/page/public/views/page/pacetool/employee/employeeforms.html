@@ -1,0 +1,87 @@
+<div class=" bootcards-container" id="main">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+        <div class="bootcards-cards">
+
+            <div class="bootcards-list" id="list" data-title="Notes" data-ng-controller="EmployeePublicFormController">
+
+                <div class="panel panel-default">
+
+                    <div class="panel-body">
+
+                        <h4><b>Employee Evaluation Forms</b></h4>
+
+                        <div class="alert alert-info" role="alert">
+                        <p>
+                           As an employee, please use this section to fill out the evaluation forms,
+                            so your supervisor and reviewer can review them.
+                        </p>
+                        </div>
+
+                        <!--<div class="alert alert-info" role="alert">
+                         </div> -->
+
+                        <div class="alert alert-danger" role="alert" ng-show="supervisoragreed === 'yes' && revieweragreed === 'no'">
+                            Your submission has been approved by supervisor.
+                        </div>
+
+                        <div class="alert alert-danger" role="alert" ng-show="revieweragreed === 'yes' && supervisoragreed === 'yes'">
+                            Your submission has been approved by both supervisor and reviewer
+                        </div>
+
+                         <div ng-show="revieweragreed === 'no' || supervisoragreed ==='no' "  >
+
+
+                                 <div class="list-group" ng-show="supervisoragreed === 'no' || revieweragreed === 'no' " >
+
+                                        <a class="list-group-item" ng-repeat="item in allItems" href="#!/employee/content/{{item.name}}-{{userid}}-{{item.value._id}}">
+
+                                            <!--<img src="{{item.coverphoto}}" class="img-rounded pull-left"/> -->
+
+                                            <i class="fa fa-2x fa-cube pull-left" aria-hidden="true"></i>
+
+                                            <h4 class="list-group-item-heading">   {{item.name}}</h4>
+                                            <p class="list-group-item-text"></p>
+
+                                        </a>
+
+                                 </div>
+
+                         </div>
+
+                        <div class="list-group" data-ng-controller="UserApproveController">
+
+                            <a ng-href='#here' ng-click='submitforreview(userid)'>
+                                <i class="fa fa-2x fa-check-circle-o pull-left" aria-hidden="true"></i>
+                                <h4 class="list-group-item-heading">
+                                    Submit Your Evaluation </h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+
+                        </div>
+
+                        <div class="list-group" >
+
+                            <a href="#!/employee/approved/{{userid}}">
+
+                                <i class="fa fa-2x fa-check-circle-o pull-left" aria-hidden="true"></i>
+
+                                <h4 class="list-group-item-heading">Your Final Evaluation Report</h4>
+                                <p class="list-group-item-text"></p>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        </div>
+    </div>
+</div>

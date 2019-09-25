@@ -1,0 +1,36 @@
+<div class="row" data-ng-controller="PayConfirmController">
+
+    <div class="bootcards-cards">
+
+        <div class="col-sm-12">
+
+            <h4>
+                <strong>Thank you for your registration. Please visit <a href="http://recsports.vt.edu">Jerry Colyer Memorial Classic Link</a> for up to date tournament information</strong>
+            </h4>
+
+
+            <div>
+
+
+
+
+                <p><strong>This is your payment receipt information</strong><br /><br />
+                    OrderNumber: {{payinformation.orderNumber}}</p>
+                <p>TransactionId: {{payinformation.transactionId}}<br /><br />
+                    TransactionTotalAmount<strong>:</strong> {{payinformation.transactionTotalAmount}} USD<br /><br />
+                    <strong>Personal Information:</strong><br /><br /> Team Name: {{payinformation.item1}}</p>
+                <p>Contact First/Last Name: {{payinformation.item2}}</p>
+                <p>Email: {{payinformation.item3}}</p>
+                <p>Age Group(s): {{payinformation.item4}}</p>
+                <p>Gender: {{payinformation.item5}}</p>
+                <p>Cell Phone: {{payinformation.item6}}</p>
+                <p>&nbsp;Number of Teams: {{payinformation.item7}}</p>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,30 @@
+<div class="list-group" data-ng-controller="EmployeeApprovedController">
+
+    <div class="row">
+        <div class="col-sm-3">
+            <i class="fa fa-2x fa-user-o pull-left "></i>
+            <p class="list-group-item-text"> {{userinformation.name}} </p>
+        </div>
+        <div class="col-sm-3">
+            <i class="fa fa-2x fa-envelope-open-o  pull-left ">    </i>
+            <p class="list-group-item-text">{{userinformation.email}}</p>
+        </div>
+        <!--  <div class="col-sm-2">
+              <i class="fa fa-2x fa-tag  pull-left ">  {{userinformation.attributes[0].title}}  </i>
+              <p class="list-group-item-text"></p>
+          </div>
+          <div class="col-sm-2">
+              <i class="fa fa-2x fa-phone  pull-left ">  {{userinformation.attributes[0].number}}  </i>
+              <p class="list-group-item-text"></p>
+          </div> -->
+        <div class="col-sm-3">
+            <i class="fa fa-2x fa-window-restore   pull-left ">   </i>
+            <p class="list-group-item-text"> {{userinformation.attributes[0].Department}}</p>
+        </div>
+        <div class="col-sm-3">
+            <i class="fa fa-2x fa-address-book  pull-left ">  </i>
+            <p class="list-group-item-text"> {{userinformation.attributes[0].Location}} </p>
+        </div>
+    </div>
+
+</div>

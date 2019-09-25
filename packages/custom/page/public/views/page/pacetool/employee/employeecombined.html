@@ -1,0 +1,113 @@
+
+<div class="bootcards-list" id="exportthis">
+    <br class="panel panel-default">
+
+    <button ng-click="export()">Export Evaluation Report as PDF</button>
+
+    <h4 class="text-center"><b>Evaluation Report</b></h4>
+
+    </br>
+    </br>
+
+        <div class="list-group">
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <i class="fa fa-2x fa-user-o pull-left "></i>
+                    <p class="list-group-item-text"> {{userinformation.name}} </p>
+                </div>
+                <div class="col-sm-3">
+                    <i class="fa fa-2x fa-envelope-open-o  pull-left ">    </i>
+                    <p class="list-group-item-text">{{userinformation.email}}</p>
+                </div>
+              <!--  <div class="col-sm-2">
+                    <i class="fa fa-2x fa-tag  pull-left ">  {{userinformation.attributes[0].title}}  </i>
+                    <p class="list-group-item-text"></p>
+                </div>
+                <div class="col-sm-2">
+                    <i class="fa fa-2x fa-phone  pull-left ">  {{userinformation.attributes[0].number}}  </i>
+                    <p class="list-group-item-text"></p>
+                </div> -->
+                <div class="col-sm-3">
+                    <i class="fa fa-2x fa-window-restore   pull-left ">   </i>
+                    <p class="list-group-item-text"> {{userinformation.attributes[0].Department}}</p>
+                </div>
+                <div class="col-sm-3">
+                    <i class="fa fa-2x fa-address-book  pull-left ">  </i>
+                    <p class="list-group-item-text"> {{userinformation.attributes[0].Location}} </p>
+                </div>
+            </div>
+
+        </div>
+
+        </br>
+
+
+            <div class="row" ng-show="numberofforms === -1">
+                    <div class="col-sm-12">
+                        <i class="fa fa-3x fa-binoculars pull-left"></i>
+                        <h4 class="list-group-item-text">No Form Submitted Yet</h4>
+                    </div>
+            </div>
+
+        <div class="list-group-item">
+            <div class="row" ng-show="numberofforms >= 0 ">
+                <div class="col-sm-6">
+                    <i class="fa fa-2x fa-id-card pull-left "></i>
+                    <p class="list-group-item-text"> Evaluation item </p>
+                </div>
+                <div class="col-sm-6">
+
+                    <i class="fa fa-2x fa-clone pull-left ">  </i>
+                    <!--<h4 class="list-group-item-heading">Evaluation content</h4> -->
+                    <p class="list-group-item-text">Evaluation content</p>
+                </div>
+            </div>
+        </div>
+
+            <div class="list-group-item" id ="{{$index}}" ng-repeat="row in employeeregistered">
+
+            <div class="list-group-item" id ="{{x.label}}" ng-repeat="x in row">
+                <div class="row" ng-show="$index == 0 ">
+                    <div class="col-sm-6">
+                        <i class="fa fa-2x fa-folder pull-left" ng-show="x.component==='label'"></i>
+                        <i class="fa fa-3x fa-id-badge  pull-left" ng-show="x.component!=='label'"></i>
+                        <p class="list-group-item-text" ng-show="x.component!=='label'">{{x.label}}</p>
+                        <b><p class="list-group-item-text" ng-show="x.component==='label'">{{x.label}}</p></b>
+                        <p class="list-group-item-text"></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fa fa-3x fa-check-square  pull-left" ></i>
+                        <h4 class="list-group-item-text" ng-show="x.component!=='label'">{{x.value}} </h4>
+                        <b><h4 class="list-group-item-text" ng-show="x.component==='label'">{{x.value}}</h4></b>
+                        <p class="list-group-item-text"></p>
+                    </div>
+                </div>
+                <div class="row" ng-show="$index != 0 ">
+                    <div class="col-sm-6">
+                        <i class="fa fa-2x fa-folder pull-left" ng-show="x.component==='label'"></i>
+                        <i class="fa fa-1x fa-circle pull-left" ng-show="x.component!=='label'"></i>
+                        <h4 class="list-group-item-heading"></h4>
+                        <b><p class="list-group-item-text" ng-show="x.component==='label'">{{x.label}}</p></b>
+                        <p class="list-group-item-text" ng-show="x.component!=='label'">{{x.label}}</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="list-group-item-text"></p>
+                        <p class="list-group-item-text" ng-show="x.component!=='label'">{{x.value}}</p>
+                        <b><p class="list-group-item-text" ng-show="x.component==='label'">{{x.value}}</p></b>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+

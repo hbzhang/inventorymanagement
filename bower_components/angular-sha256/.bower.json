@@ -1,0 +1,13 @@
+{
+  "name": "angular-sha256",
+  "homepage": "https://github.com/casper123/angular-sha256",
+  "_release": "af1c096c0b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "af1c096c0b29c8bf198baa7148ccb386d8161f50"
+  },
+  "_source": "https://github.com/casper123/angular-sha256.git",
+  "_target": "*",
+  "_originalSource": "git+https://github.com/casper123/angular-sha256.git"
+}

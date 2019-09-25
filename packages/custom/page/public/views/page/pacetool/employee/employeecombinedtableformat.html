@@ -1,0 +1,77 @@
+<div class="bootcards-list" id="exportthis">
+    <br class="panel panel-default">
+
+
+    <div class="col-sm-12">
+        <div>
+    <button class="text-center" ng-click="export()">Export Evaluation Report as PDF</button>
+        </div>
+     </div>
+
+    </br>
+
+    <div class="col-sm-12">
+    <h4 class="text-center"><b>Faculty Evaluation Report</b></h4>
+    </div>
+
+    </br>
+
+    <div ng-include="' page/views/page/pacetool/user/userbasicinformation.html'"></div>
+
+
+    </br>
+
+    <div class="row" ng-show="numberofforms === -1">
+        <div class="col-sm-12">
+            <i class="fa fa-3x fa-binoculars pull-left"></i>
+            <h4 class="list-group-item-text">NO Form Submitted Yet</h4>
+        </div>
+    </div>
+
+
+        <div class="row" ng-show="numberofforms >= 0 ">
+
+            <div class="list-group-item" id ="{{$index}}"ng-repeat="row in employeeregistered"  ng-init="rowIndex = $index" >
+
+                <div class="col-sm-12" ng-repeat="x in row" ng-init="columnIndex = $index" >
+                   <h4 ng-show="columnIndex == 0 ">{{x.label}} {{x.value}}</h4>
+                </div>
+
+
+                <table st-table="rowCollection" class="table table-striped" id ="Table-{{$index}}" >
+                    <thead>
+                    <tr>
+                        <th>Submission</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id ="tr-{{x.label}}" ng-repeat="x in row" ng-init="columnIndex = $index" >
+                        <td ng-show="columnIndex != 0 " class="report_highlight" ng-if="x.component==='label'">
+
+                            <h5 >{{x.label}}</h5>
+                            <h5 >{{x.value}}</h5>
+                        </td>
+                        <td ng-show="columnIndex != 0 " ng-if="x.component!=='label'">
+
+                            <h5 >{{x.label}}</h5>
+                            <h5 >{{x.value}}</h5>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+
+
+        </div>
+
+
+</div>
+</div>
+
+
+
+
+
+

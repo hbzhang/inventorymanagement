@@ -1,0 +1,28 @@
+<div ng-app="GridCambiable" ng-controller="InstagramController">
+
+    <div class="bar">
+
+        <!-- These two buttons switch the layout varaible,
+             which causes the correct UL to be shown. -->
+
+        <a class="list-icon" ng-class="{active: isLayout('list')}" ng-click="setLayout('list')"></a>
+        <a class="grid-icon" ng-class="{active: isLayout('grid')}" ng-click="setLayout('grid')"></a>
+    </div>
+
+    <!-- We have two layouts. We choose which one to show depending on the "layout" binding -->
+
+    <ul ng-show="isLayout('grid')" class="grid">
+        <!-- A view with big photos and no text -->
+        <li ng-repeat="p in pics">
+            <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" /></a>
+        </li>
+    </ul>
+
+    <ul ng-show="isLayout('list')" class="list">
+        <!-- A compact view smaller photos and titles -->
+        <li ng-repeat="p in pics">
+            <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.thumbnail.url}}" /></a>
+            <p>{{p.caption.text}}</p>
+        </li>
+    </ul>
+</div>

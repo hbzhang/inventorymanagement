@@ -1,0 +1,33 @@
+.page-example h1 {
+  background-color: purple
+}
+.notbold{
+  font-weight:normal
+}​
+
+ .bold{
+   font-weight:blod
+ }​
+
+ul, li {list-style-type: none;}
+
+li {padding-left: 0em; text-indent: 0em;}
+
+
+.report_success {
+    background-color: #dff0d8;
+}
+.report_highlight{
+    background-color: rgba(3, 7, 39, 0.11);
+}
+.report_warning {
+    background-color: #fcf8e3;
+}
+.report_info {
+    background-color: #d9edf7;
+}
+
+.list-group-item {
+    /* margin-left: 15px; */
+    padding-left: 0;
+}

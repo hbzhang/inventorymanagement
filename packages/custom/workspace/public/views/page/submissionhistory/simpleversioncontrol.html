@@ -1,0 +1,46 @@
+<div>
+    <div class="loader" data-ng-init="init()" data-ng-hide="users.length"></div>
+    <h4><b>List of All Users</b></h4>
+
+    <div class="panel panel-default bootcards-summary">
+
+        <div class="panel-body">
+            <div class="row">
+
+                <div class="col-xs-6 col-sm-3" data-ng-show="users.length" data-ng-repeat="user in users">
+
+                    <div>
+                        <ul class="unstyled">
+
+                            <li class="table-editable-cell" data-ng-repeat="field in userSchema" data-ng-if="field.inTable">
+
+                                <a class="bootcards-summary-item" data-ng-if="(field['type'] == 'text')" href="#!/workspace/manage/simpleversioncontrol/submissions/{{user[field['schemaKey']]}}">
+                                    <i class="fa fa-3x fa-user-o"></i>
+                                    <h4 > <b> {{user[field['schemaKey']]}} </b> </h4>
+                                </a>
+
+                                <!--<a class="btn text-center" data-ng-if="(field['type'] == 'email')" href="/#!/supervisedemployeeforms/Employee/{{user[field['schemaKey']]}}">
+                                    <h4 > <b> {{user[field['schemaKey']]}} </b> </h4>
+
+                                </a> -->
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--<div class="classedit" >
+                        <div class="editbtns" data-ng-repeat="field in userSchema" data-ng-if="field.inTable">
+                            <h4 class="text-center" data-ng-if="(field['type'] == 'email')">
+                                 {{user[field['schemaKey']]}}
+                            </h4>
+
+                          </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

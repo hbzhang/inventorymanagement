@@ -1,0 +1,12 @@
+{
+	"rule": {
+		"connection": [{
+			"db": "pace",
+      "collection" : "users",
+			"user_name": "",
+			"password": "",
+			"ip_address": "127.0.0.1",
+			"port": "27017"
+		}]
+	}
+}

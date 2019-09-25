@@ -1,0 +1,10 @@
+test/coverage/**
+packages/system/**
+packages/custom/product/**
+packages/custom/admin/**
+packages/custom/front/**
+packages/custom/helpers/**
+packages/custom/workspace/**
+packages/custom/dashboard/**
+packages/custom/report/**
+packages/custom/page/**

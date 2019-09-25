@@ -1,0 +1,65 @@
+<div class=" bootcards-container" id="main" data-ng-controller="EmployeeFormBasicInformationController">
+
+    <div class="row" data-ng-controller="SupervisorEmployeeFormController">
+
+        <div class="col-lg-12">
+
+            <div class="bootcards-list" id="list" data-title="Notes">
+
+                <div class="panel panel-default" data-ng-controller="IsApprovedController">
+                    <div class="panel-body">
+
+                        <div>
+                            <a href="{{preurlemployeelist}}">Go Back to List of Supervised Employees</a>
+                        </div>
+
+                        <hr/>
+
+                        <h4 class="text-center">Supervisor Evaluate and Approve {{employeenamefromlist}}</h4>
+
+                        <div class="alert alert-danger"  ng-show="supervisoragreed === 'yes' && revieweragreed === 'no'">
+                            {{employeenamefromlist}}'s forms has been approved by supervisor
+                        </div>
+
+                        <div class="alert alert-danger" ng-show="supervisoragreed === 'yes' && revieweragreed === 'yes' ">
+                            {{employeenamefromlist}}'s forms has been approved by both supervisor and reviewer
+                        </div>
+
+
+                                <div class="list-group" ng-show="supervisoragreed === 'no' || revieweragreed === 'no' " >
+
+                                    <a class="list-group-item" ng-repeat="item in allItems"  href="#!/supervisor/content/{{item.wholeprogram}}-{{item.supervisorformid}}-{{item.value._id}}">
+
+                                        <!--<img src="{{item.coverphoto}}" class="img-rounded pull-left"/> -->
+
+                                        <i class="fa fa-2x fa-cube pull-left" aria-hidden="true"></i>
+
+                                        <h4 class="list-group-item-heading">{{item.name}}</h4>
+                                        <p class="list-group-item-text"></p>
+
+                                     </a>
+
+                                </div>
+
+
+                             <div class="list-group" >
+
+                                <a class="list-group-item" href="#!/supervisor/approve/{{userid}}">
+
+                                <i class="fa fa-2x fa-check-circle-o pull-left" aria-hidden="true"></i>
+
+                                <h4 class="list-group-item-heading">Approve Employee Submission </h4>
+                                <p class="list-group-item-text"></p>
+
+                                </a>
+
+                             </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -72,7 +72,7 @@
     "lodash": "^2.4.1",
     "meanio": "~0.5.10",
     "method-override": "^1.0.0",
-    "mongoose": "^3.8.8",
+    "mongoose": "^5.7.5",
     "mongoose-gen": "latest",
     "mongoose-custom-fields": "latest",
     "morgan": "^1.0.0",
